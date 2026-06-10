@@ -1,0 +1,19 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Obsidian-specific files (ignore workspace state, keep configuration and plugins)
+protocol/.obsidian/workspace.json
+protocol/.obsidian/workspace-mobile.json
+protocol/.obsidian/backups/
+protocol/.obsidian/cache/
+protocol/.obsidian/indexedDB/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
