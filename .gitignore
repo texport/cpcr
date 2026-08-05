@@ -16,4 +16,9 @@ protocol/.obsidian/indexedDB/
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+# Customizations / Scratch
+.agents/
+scratch/
+
+*.zip
+protocol/СПЕЦИФИКАЦИЯ_ПРОТОКОЛА_*.md

@@ -28,6 +28,12 @@ enum DomainTypeEnum {
   DOMAIN_PARKING = 5;
 }
 
+enum CommodityTypeEnum {
+  COMMODITY_TYPE_PRODUCT = 0; // с версии 204
+  COMMODITY_TYPE_TASK = 1; // с версии 204
+  COMMODITY_TYPE_SERVICE = 2; // с версии 204
+}
+
 message TicketRequest {
   message Tax {
     required TaxTypeEnum type = 1;
@@ -64,6 +70,7 @@ message TicketRequest {
       required string measure_unit_code = 13; // добавлено в версии 201
       repeated string list_excise_stamp = 14; // добавлено в версии 203
       optional string ntin = 15; // добавлено в версии 203
+      optional CommodityTypeEnum commodity_type = 16; // optional с версии 204
     }
 
     message StornoCommodity {
@@ -83,6 +90,7 @@ message TicketRequest {
       required string measure_unit_code = 12; // добавлено в версии 201
       repeated string list_excise_stamp = 13; // добавлено в версии 203
       optional string ntin = 14; // добавлено в версии 203
+      optional CommodityTypeEnum commodity_type = 15; // optional с версии 204
     }
 
     enum ItemTypeEnum {
@@ -145,7 +153,7 @@ message TicketRequest {
       optional string pos_card_type = 2;
       optional uint32 pos_autorization_code = 3;
       optional uint64 pos_rrn = 4; // до версии 203 тип uint32
-      optional uint32 pos_receipt_number = 5;
+      optional uint64 pos_receipt_number = 5; // uint64 с версии 204
     }
 
     message MobilePaymentFields {

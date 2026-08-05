@@ -25,3 +25,10 @@ message OrgRegInfo {
   required string oked = 5; // required с версии 200
   required string address_kz = 6; // добавлен в версии 203
 }
+
+message OfdRegInfo {
+  required string title = 1; // required с версии 204
+  required string title_kz = 2; // required с версии 204
+  required string url = 3; // required с версии 204
+}
+

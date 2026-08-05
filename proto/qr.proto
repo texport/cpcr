@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+import "common.proto";
+
+package ofd.proto;
+
+enum StatusTypeEnum {
+  STATUS_NEW = 0;
+  STATUS_SCANNED = 1;
+  STATUS_BLOCKED = 2;
+  STATUS_AUTH = 3;
+  STATUS_PAID = 4;
+  STATUS_REJECTED = 5;
+  STATUS_WAIT = 6;
+}
+
+message QRRequest {
+  required uint64 invoice_id = 1;
+  optional Money amount = 2; // required при COMMAND_QR_GENERATE
+}
+
+message QRResponse {
+  required string qr_code = 1;
+  required StatusTypeEnum status = 2;
+}

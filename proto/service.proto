@@ -76,6 +76,7 @@ message ServiceResponse {
     required KkmRegInfo kkm = 1; // required с версии 200
     optional PosRegInfo pos = 2;
     required OrgRegInfo org = 3; // required с версии 200
+    optional OfdRegInfo ofd = 4; // optional с версии 204
   }
 
   message LastDocumentInfo {

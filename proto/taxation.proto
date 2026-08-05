@@ -7,10 +7,11 @@ enum TaxTypeEnum {
 }
 
 enum TaxationTypeEnum {
+  reserved 103; // reserved с версии 204
+  reserved "TRBP"; // reserved с версии 204
   STS = 100;
-  RTS = 101;
+  RTS = 101; // переименовано с TRTS в версии 204
   TRFF = 102;
-  TRBP = 103;
 }
 
 message BindedTaxation {
